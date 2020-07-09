@@ -1,5 +1,8 @@
 # My-PHP-Studies
  Meus estudos em PHP
+ 
+Iniciar servidor PHP pelo terminal:  php -S localhost:80
+
 
 ## MIT License
 
