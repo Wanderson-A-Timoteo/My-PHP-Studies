@@ -1,9 +1,9 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: eduardo
- * Date: 03/06/18
- * Time: 16:56
+ * Created by VSCode.
+ * User: Wanderson A.Timoteo
+ * Date: 09/07/2020
+ * Time: 22:00
  */
 
 include "servicos/servicoMensagemSessao.php";
