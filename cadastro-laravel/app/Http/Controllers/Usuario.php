@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class Usuario extends Controller
 {
     public function cadastrar() {
-        echo 10;
+        return view('usuario.cadastro');
 
     }
 
