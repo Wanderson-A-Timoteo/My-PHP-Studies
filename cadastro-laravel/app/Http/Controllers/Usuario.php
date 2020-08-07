@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Hash;
+use App\Model\Usuario as UsuarioModel;
 
 class Usuario extends Controller
 {
@@ -15,7 +16,15 @@ class Usuario extends Controller
     }
 
     public function salvar(Request $request) {
-        dd($request->all());
-
+        $request->validate([
+            "nome" => "requerid",
+            "email" => "requerid|email",
+            "senha" => "requerid|min:5"
+        ]);
+        
+        //dd($request->all());
+        UsuarioModel::cadastrar($request);
+        
+        return view('usuario.sucesso');
     }
 }
