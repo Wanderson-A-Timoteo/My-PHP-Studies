@@ -7,6 +7,10 @@ class DefaultController {
     
     public function index() {
 
+        /**
+         * @Route("/", methods={"POST", "GET"})
+         */
+
         $resp = new response();
         $resp->setContent(json_decode(
             [
