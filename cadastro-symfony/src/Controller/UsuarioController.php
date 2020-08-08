@@ -15,6 +15,12 @@ class UsuarioController extends AbstractController
     public function index(): Response 
     {
         return $this->render("usuario/form.html.twig");
+        
+        // teste de msg de erro e sucesso
+        //return $this->render("usuario/sucesso.html.twig", [
+        //    'fulano' => "Wanderson"
+        //]);
+
     }
 
     /**

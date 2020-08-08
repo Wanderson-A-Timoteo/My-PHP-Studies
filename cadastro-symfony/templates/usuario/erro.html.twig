@@ -12,13 +12,7 @@
 
 {% block title %} Cadastro de Usuário {% endblock %}
 
-{# formulario de cadastro de usuario #}
+
 {% block body %}
-    <form method="POST" action="{{ url('web_usuario_salvar') }}">
-        <input type="text" name="nome" placeholder="Nome" />
-        <input type="text" name="email" placeholder="Email" />
-
-        <button type="submit"> Salvar </button>
-    </form>
-
+    <p class="msgErro"> Ops! Falha ao cadastrar o usuário: <strong> {{ fulano }} </strong></p>
 {% endblock %}
