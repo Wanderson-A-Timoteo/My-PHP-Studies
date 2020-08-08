@@ -1,16 +1,19 @@
 <?php
 
-
 namespace App\Controller;
 
-class DefaultController {
-    
-    public function index() {
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
-        /**
-         * @Route("/", methods={"POST", "GET"})
-         */
+class DefaultController 
+{
+    /**
+     * @Route("/", methods={"POST", "GET"})
+     */
 
+    public function index() 
+    {
         $resp = new response();
         $resp->setContent(json_decode(
             [
