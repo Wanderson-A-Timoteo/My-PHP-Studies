@@ -23,8 +23,6 @@ Route::prefix('v1')->group(function() {
         return Usuario::listar(10);
     });
 
-    Route::post('cadastra', function() {
-        echo 'implementar';
-    });
+    Route::post('cadastra', "API\Usuario@salvar");
 
 });
