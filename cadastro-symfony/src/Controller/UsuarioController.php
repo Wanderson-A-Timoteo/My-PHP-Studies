@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttFoundation\Response;
 use Symfony\Controller\Routing\Annotation\Route;
 
 /**
