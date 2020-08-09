@@ -2,6 +2,7 @@
 
 namespace App\Controller\Api;
 
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
@@ -14,7 +15,7 @@ class UsuarioController
      */
     public function lista(): jsonResponse
     {
-        return new JsonResponse(["Implementar lista na API", 404]);
+        return new JsonResponse(["Implementar lista na API"], 404);
     }
 
     /**
@@ -22,6 +23,6 @@ class UsuarioController
      */
     public function cadastra(): JsonResponse
     {
-        return new JsonResponse(["Implementar cadastro API", 404]);
+        return new JsonResponse(["Implementar cadastro API"], 404);
     }
 }
