@@ -28,7 +28,7 @@ class UsuarioController extends AbstractController
     /**
      * @Route("/salvar", methods={"POST"}, name="salvar")
      */
-    public function salvar(): Response
+    public function salvar(Request $request): Response
     {
         return new Response("Implementar gravação ao banco de dados");
     }
