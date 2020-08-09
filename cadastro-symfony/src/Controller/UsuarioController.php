@@ -2,8 +2,11 @@
 
 namespace App\Controller;
 
+use App\Entity\Usuario;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Controller\Routing\Annotation\Route;
 
 /**
@@ -42,7 +45,7 @@ class UsuarioController extends AbstractController
         $doctrine->flush();
 
         
-        if ( $usuario->getId() )
+        if ( $doctrine->contains($usuario) )
         {
             return $this->render("usuario/sucesso.html.twig", [
                 "fulano" => $data['nome']
