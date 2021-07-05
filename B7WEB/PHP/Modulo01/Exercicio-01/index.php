@@ -15,7 +15,7 @@ $lista = [
 
 echo "NOME: " .$lista['nome']."<br/>";
 echo "FORÇA: ".$lista['atributos']['forca']."<br/>";
-echo "VIDA: ".$vida;
+echo "VIDA: ".$lista['vida'];
 
 -->
 <?php
