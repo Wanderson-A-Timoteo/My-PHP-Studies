@@ -1545,7 +1545,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-12-19T21:55:10+00:00"
+
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -1617,7 +1617,7 @@
                 }
             ],
             "abandoned": "symfony/mailer",
-            "time": "2021-10-18T15:26:12+00:00"
+
         },
         {
             "name": "symfony/console",
