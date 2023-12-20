@@ -8,7 +8,7 @@ $databasePath = __DIR__ . '/banco.sqlite';
 $pdo = new PDO('sqlite:' . $databasePath);
 
 // Cria o objeto aluno
-$student = new Student(null, 'Ryan Timóteo', new DateTimeImmutable('2013-04-20'));
+$student = new Student(null, 'Wendrew Nick', new DateTimeImmutable('2000-03-06'));
 
 // Insere o aluno criado no Banco de Dados passando os parametros direto na instrução SQL para cada posição
 //$sqlInsert = "INSERT INTO students(name, birth_date) VALUES ('{$student->name()}', '{$student->birthDate()->format('Y-m-d')}')";
@@ -33,4 +33,4 @@ if($statement->execute()) {
 
 
 // var_dump retornará 1 caso ocorrer tudo certo, pdo->exec faz a inserção
-var_dump($pdo->exec($sqlInsert));
+//var_dump($pdo->exec($sqlInsert));
