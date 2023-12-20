@@ -5,6 +5,7 @@ namespace Alura\Pdo\Infrastructure\Repository;
 use Alura\Pdo\Domain\Model\Student;
 use Alura\Pdo\Domain\Repository\StudentRepository;
 use Alura\Pdo\Infrastructure\Persistence\ConnectionCreator;
+use DateTimeImmutable;
 use PDO;
 
 class PdoStudentRepository implements StudentRepository
@@ -78,6 +79,7 @@ class PdoStudentRepository implements StudentRepository
     $stmt->bindValue(':name', $student->name());
     $stmt->bindValue(':birth_date', $student->birthDate()->format('Y-m-d'));
     $stmt->bindValue(':id', $student->id(), PDO::PARAM_INT);
+    return $stmt->execute();
   }
 
   public function remove(Student $student): bool
