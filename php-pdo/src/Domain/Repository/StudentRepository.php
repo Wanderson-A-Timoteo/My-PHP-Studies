@@ -10,5 +10,7 @@ interface StudentRepository
   public function allStudents(): array;
   public function studentsBirthAt(DateTimeImmutable $birthDate): array;
   public function save(Student $student): bool;
+  public function update(Student $student): bool;
+  public function insert(Student $student): bool;
   public function remove(Student $student): bool;
 }

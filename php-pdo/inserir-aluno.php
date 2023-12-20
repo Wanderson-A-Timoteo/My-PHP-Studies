@@ -1,11 +1,11 @@
 <?php
 
 use Alura\Pdo\Domain\Model\Student;
-use Alura\Pdo\Infrastructure\Persistence\ConnectionCreator;
 
 require_once 'vendor/autoload.php';
 
-$pdo = ConnectionCreator::createConnection();
+$pdo = \Alura\Pdo\Infrastructure\Persistence\ConnectionCreator::createConnection();
+
 
 // Cria o objeto aluno
 $student = new Student(null, 'Ana Beatriz', new DateTimeImmutable('2014-10-16'));

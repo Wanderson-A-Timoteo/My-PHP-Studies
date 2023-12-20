@@ -1,11 +1,10 @@
 <?php
 
 use Alura\Pdo\Domain\Model\Student;
-use Alura\Pdo\Infrastructure\Persistence\ConnectionCreator;
 
 require_once 'vendor/autoload.php';
 
-$pdo = ConnectionCreator::createConnection();
+$pdo = \Alura\Pdo\Infrastructure\Persistence\ConnectionCreator::createConnection();
 
 $statement = $pdo->query('SELECT * FROM students;');
 
