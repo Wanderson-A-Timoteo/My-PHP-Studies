@@ -1,14 +1,14 @@
 <?php
 
 use Alura\Pdo\Domain\Model\Student;
+use Alura\Pdo\Infrastructure\Persistence\ConnectorCreator;
 
 require_once 'vendor/autoload.php';
 
-$databasePath = __DIR__ . '/banco.sqlite';
-$pdo = new PDO('sqlite:' . $databasePath);
+$pdo = ConnectorCreator::createConnection();
 
 // Cria o objeto aluno
-$student = new Student(null, 'Wendrew Nick', new DateTimeImmutable('2000-03-06'));
+$student = new Student(null, 'Ana Beatriz', new DateTimeImmutable('2014-10-16'));
 
 // Insere o aluno criado no Banco de Dados passando os parametros direto na instrução SQL para cada posição
 //$sqlInsert = "INSERT INTO students(name, birth_date) VALUES ('{$student->name()}', '{$student->birthDate()->format('Y-m-d')}')";

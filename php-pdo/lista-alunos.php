@@ -1,11 +1,11 @@
 <?php
 
 use Alura\Pdo\Domain\Model\Student;
+use Alura\Pdo\Infrastructure\Persistence\ConnectorCreator;
 
 require_once 'vendor/autoload.php';
 
-$databasePath = __DIR__ . '/banco.sqlite';
-$pdo = new PDO('sqlite:' . $databasePath);
+$pdo = ConnectorCreator::createConnection();
 
 $statement = $pdo->query('SELECT * FROM students;');
 
@@ -15,7 +15,11 @@ $studentList = [];
 
 foreach($studentDataList as $studentData) {
   if ($studentData['name'] !== null) {
-    $studentList[] = new Student($studentData['id'], $studentData['name'], new \DateTimeImmutable($studentData['birth_date']));
+    $studentList[] = new Student(
+      $studentData['id'], 
+      $studentData['name'], 
+      new \DateTimeImmutable($studentData['birth_date'])
+    );
   }
 }
 
